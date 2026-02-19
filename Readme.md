@@ -95,6 +95,13 @@ Inventory --> List of hosts
 ansible -i <privateIP/Inventory>, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -m ping
 ansible -i <privateIP/Inventory>, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -m dnf -a "name=nginx state=present" -b
 ansible -i 172.31.24.xxx, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -m service -a "name=nginx state=started" -b
+
 ```
 * Adoc commands --> Manual way
 * Playbook --> Keep all ur modules in a single file with YAML Syntax and run that file
+
+```sh
+ansible -i inventory.ini web --list-hosts
+
+
+```
