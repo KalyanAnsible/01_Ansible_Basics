@@ -1,0 +1,15 @@
+- name: PLAY-1
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: PLAY-1 & TASK-1
+      debug:
+        msg: "Hello I'm from PLAY-1 & TASK-1"
+
+- name: PLAY-2
+  hosts: web
+  become: yes
+  tasks:
+    - name: PLAY-2 & TASK-1
+      debug:
+        msg: "Hello I'm from PLAY-1 & TASK-1"

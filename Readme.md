@@ -100,8 +100,11 @@ ansible -i 172.31.24.xxx, all -e ansible_user=ec2-user -e ansible_password=DevOp
 * Adoc commands --> Manual way
 * Playbook --> Keep all ur modules in a single file with YAML Syntax and run that file
 
+* -e = extra vars
+* Gathering Facts:--> Ansible collects system information such as:OS,IP address,Hostname,Distribution
+
 ```sh
 ansible -i inventory.ini web --list-hosts
-
+ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 02-nginx.yml
 
 ```
