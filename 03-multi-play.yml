@@ -12,4 +12,4 @@
   tasks:
     - name: PLAY-2 & TASK-1
       debug:
-        msg: "Hello I'm from PLAY-1 & TASK-1"
+        msg: "Hello I'm from PLAY-2 & TASK-1"
