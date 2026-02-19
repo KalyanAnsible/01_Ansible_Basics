@@ -4,7 +4,12 @@
   tasks:
     - name: Check user exit or not
       ansible.builtin.command: id kalyan
+      register: OUTPUT
       ignore_errors: true
+
+    - name: print 
+      ansible.builtin.debug:
+        msg: "output of above task is  {{ OUTPUT }}"
 
     - name: print 
       ansible.builtin.debug:
