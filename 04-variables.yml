@@ -4,9 +4,21 @@
 
   # vars:
   #   NAME: "Kalyan"
-  vars_files:
-    - vars.yml
+  # vars_files:
+  #   - vars.yml
+
+  vars_prompt:
+  - name: NAME
+    prompt: Please enter username
+    private: false
+  
+  - name: PASSWORD
+    prompt: Please enter ur passwd
+    private: true
+
+
+
   tasks:
     - name: Print the msg
       ansible.builtin.debug:
-        msg: "Hello I'm {{ NAME }}"
+        msg: "Hello I'm {{ NAME }} and {{ PASSWORD }}"
