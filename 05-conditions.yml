@@ -11,6 +11,10 @@
       ansible.builtin.debug:
         msg: "output of above task is  {{ OUTPUT }}"
 
+    - name: Create user when not exit
+      ansible.builtin.command: useradd kalyan
+      when: OUTPUT.rc != 0
+
     - name: print 
       ansible.builtin.debug:
         msg: "Hello kalyan"
