@@ -6,5 +6,5 @@
     NAME: "Kalyan"
   tasks:
     - name: Print the msg
-      aansible.builtin.debug:
+      ansible.builtin.debug:
         msg: "Hello I'm {{ NAME }}"
