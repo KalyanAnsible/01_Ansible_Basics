@@ -4,6 +4,7 @@
   tasks:
     - name: Check user exit or not
       ansible.builtin.command: id kalyan
+      ignore_errors: true
 
     - name: print 
       ansible.builtin.debug:
