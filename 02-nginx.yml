@@ -6,3 +6,4 @@
       dnf:
         name: Nginx
         state: absent
+        autoremove: yes
